@@ -22,8 +22,8 @@ def convertir_en_duree(secondes):
 resultats = pd.DataFrame(columns=['Country', 'Year', 'Month', 'Day_Length', 'Sunrise', 'Sunset'])
 
 # Date de début et fin
-date_debut = datetime(2015, 1, 1)
-date_fin = datetime(2016, 1, 1)
+date_debut = datetime(2018, 1, 1)
+date_fin = datetime(2019, 1, 1)
 
 try:
     # Boucle sur chaque ligne du dataframe
@@ -66,14 +66,14 @@ finally:
     resultats['Day_Length_Seconds'] = resultats['Day_Length'].apply(convertir_en_secondes)
 
     # Enregistrer les résultats dans un fichier CSV
-    resultats.to_csv('resultats_sunrise_sunset2015.csv', index=False)
+    resultats.to_csv('resultats_sunrise_sunset2023.csv', index=False)
 
     # Grouper par année et par pays, puis calculer la moyenne des durées du jour
     averages = resultats.groupby(['Year', 'Country'])['Day_Length_Seconds'].mean().reset_index()
     averages['Average_Day_Length'] = averages['Day_Length_Seconds'].apply(convertir_en_duree)
 
     # Écrire les résultats dans un nouveau fichier CSV
-    output_file = 'resultats2015.csv'
+    output_file = 'resultats2018.csv'
     averages[['Year', 'Country', 'Average_Day_Length']].to_csv(output_file, index=False)
 
     print(f"Les résultats ont été enregistrés dans {output_file}.")
