@@ -23,7 +23,7 @@ Year,Country,Average_Day_Length
 2013,Benin,12:09:33
 2013,Bermuda,12:12:51
 2013,Bhutan,12:11:56
-2013,Bolivia_(Plurinational_State_of),12:08:46
+2013,Bolivia,12:08:46
 2013,Bosnia_and_Herzegovina,12:16:05
 2013,Botswana,12:08:54
 2013,Brazil,12:08:47
@@ -225,8 +225,8 @@ Year,Country,Average_Day_Length
 2013,Uruguay,12:09:28
 2013,Uzbekistan,12:15:11
 2013,Vanuatu,12:08:47
-2013,Venezuela_(Bolivarian_Republic_of),12:09:52
-2013,Viet_Nam,12:10:58
+2013,Venezuela,12:09:52
+2013,VietNam,12:10:58
 2013,Wallis_and_Futuna_Islands,12:08:47
 2013,Western_Sahara,12:11:53
 2013,Yemen,12:10:19

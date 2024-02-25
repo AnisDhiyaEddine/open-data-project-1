@@ -23,7 +23,7 @@ Year,Country,Average_Day_Length
 2015,Benin,12:09:33
 2015,Bermuda,12:12:51
 2015,Bhutan,12:11:56
-2015,Bolivia_(Plurinational_State_of),12:08:46
+2015,Bolivia,12:08:46
 2015,Bosnia_and_Herzegovina,12:16:05
 2015,Botswana,12:08:54
 2015,Brazil,12:08:46
@@ -225,8 +225,8 @@ Year,Country,Average_Day_Length
 2015,Uruguay,12:09:28
 2015,Uzbekistan,12:15:11
 2015,Vanuatu,12:08:47
-2015,Venezuela_(Bolivarian_Republic_of),12:09:52
-2015,Viet_Nam,12:10:58
+2015,Venezuela,12:09:52
+2015,VietNam,12:10:58
 2015,Wallis_and_Futuna_Islands,12:08:47
 2015,Western_Sahara,12:11:53
 2015,Yemen,12:10:19

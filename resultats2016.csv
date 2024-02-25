@@ -23,7 +23,7 @@ Year,Country,Average_Day_Length
 2016,Benin,12:09:31
 2016,Bermuda,12:12:41
 2016,Bhutan,12:11:48
-2016,Bolivia_(Plurinational_State_of),12:08:51
+2016,Bolivia,12:08:51
 2016,Bosnia_and_Herzegovina,12:15:49
 2016,Botswana,12:09:02
 2016,Brazil,12:08:51
@@ -225,8 +225,8 @@ Year,Country,Average_Day_Length
 2016,Uruguay,12:09:40
 2016,Uzbekistan,12:14:57
 2016,Vanuatu,12:08:52
-2016,Venezuela_(Bolivarian_Republic_of),12:09:49
-2016,Viet_Nam,12:10:52
+2016,Venezuela,12:09:49
+2016,VietNam,12:10:52
 2016,Wallis_and_Futuna_Islands,12:08:51
 2016,Western_Sahara,12:11:45
 2016,Yemen,12:10:14

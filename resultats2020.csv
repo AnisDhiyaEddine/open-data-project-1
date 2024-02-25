@@ -23,7 +23,7 @@ Year,Country,Average_Day_Length
 2020,Benin,12:09:31
 2020,Bermuda,12:12:41
 2020,Bhutan,12:11:48
-2020,Bolivia_(Plurinational_State_of),12:08:51
+2020,Bolivia,12:08:51
 2020,Bosnia_and_Herzegovina,12:15:49
 2020,Botswana,12:09:02
 2020,Brazil,12:08:51
@@ -225,8 +225,8 @@ Year,Country,Average_Day_Length
 2020,Uruguay,12:09:40
 2020,Uzbekistan,12:14:57
 2020,Vanuatu,12:08:52
-2020,Venezuela_(Bolivarian_Republic_of),12:09:49
-2020,Viet_Nam,12:10:52
+2020,Venezuela,12:09:49
+2020,VietNam,12:10:52
 2020,Wallis_and_Futuna_Islands,12:08:51
 2020,Western_Sahara,12:11:45
 2020,Yemen,12:10:15
