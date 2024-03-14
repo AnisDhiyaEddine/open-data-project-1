@@ -1,0 +1,127 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Music and Humour API",
+    "description": "Open Data for music and humour API",
+    "contact": {
+      "email": "dhiaeboudiaf@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0 (Not licenced yet)",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://virtserver.swaggerhub.com/DHIAEBOUDIAF_1/open-data/1.0.0",
+      "description": "Open Data for music and humour API"
+    }
+  ],
+  "tags": [
+    {
+      "name": "developers",
+      "description": "Operations available to regular developers"
+    }
+  ],
+  "paths": {
+    "/country/{country}": {
+      "get": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "searches by Country",
+        "description": "By passing in the appropriate options, you can search for\nhumour and music relation\n",
+        "operationId": "searchByCountry",
+        "parameters": [
+          {
+            "name": "country",
+            "in": "path",
+            "description": "pass a required country to get music and humour insights related to it",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "search results matching criteria",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Abortion when no country is found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Country": {
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "number"
+          },
+          "country": {
+            "type": "string"
+          },
+          "year": {
+            "type": "number"
+          },
+          "happiness_index": {
+            "type": "number"
+          },
+          "happiness_rank": {
+            "type": "number"
+          },
+          "crime_rate": {
+            "type": "number"
+          },
+          "Hip hop/Rap/R&b": {
+            "type": "number"
+          },
+          "EDM": {
+            "type": "number"
+          },
+          "Pop": {
+            "type": "number"
+          },
+          "Rock/Metal": {
+            "type": "number"
+          },
+          "Latin/Reggaeton": {
+            "type": "number"
+          },
+          "other": {
+            "type": "number"
+          },
+          "average_day_length": {
+            "type": "string"
+          }
+        },
+        "description": "music and humour relation for a specific country"
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Country"
+            }
+          }
+        }
+      }
+    }
+  }
+}

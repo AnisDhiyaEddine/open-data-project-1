@@ -11,39 +11,25 @@ api = Api(app)
 import csv
 
 # read a csv file
-with open('data.csv', 'r') as file:
+with open('CrimeMusicData.csv', 'r') as file:
 		reader = csv.reader(file)
 		data = list(reader)
 
- 
+
+header = ['ID','Country','Year','Index','Rank','Crime Rate','Hip hop/Rap/R&b','EDM','Pop','Rock/Metal','Latin/Reggaeton','Other','Average_Day_Length']
 class Country(Resource): 
 	def get(self, country):
 		res = []
 		for i in range(len(data)):
-			if data[i][1] == country:
+			if data[i][1].lower() == country.lower():
 				res.append(data[i])
 		if len(res) > 1:
 			return jsonify({'data': 		
-									list(map(lambda x: {
-										'country': x[1],
-										'year': x[2],
-										'music_type': x[3],
-										'happiness_score': x[4],
-										'happiness_rank': x[5],
-										'daylight_duration': x[6],
-										'crime_rate': x[7]
-									}, res))
+									list(map(lambda x: 
+									dict(zip(header, x)), res))
 			})
 		elif len(res) == 1:
-			return jsonify({'data': {
-				'country': res[0][1],
-				'year': res[0][2],
-				'music_type': res[0][3],
-				'happiness_score': res[0][4],
-				'happiness_rank': res[0][5],
-				'daylight_duration': res[0][6],
-				'crime_rate': res[0][7]
-			}})
+			return jsonify({'data': dict(zip(header, res[0]))})
 		else:
 			# return status code 404
 			abort(404, message="No data found for this country")
